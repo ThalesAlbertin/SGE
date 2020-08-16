@@ -6,7 +6,7 @@ public class Login {
 
         String nome = "";
         String sobrenome = "";
-        String senha;
+        String senha = "";
 
         Scanner scanner = new Scanner(System.in);
 
@@ -67,5 +67,27 @@ public class Login {
 
         }
 
+        i=false;
+
+        System.out.println("Faça seu Login");
+
+        while(!i) {
+
+            System.out.println("Primeiro Insira seu Login:");
+
+            String loginentrada = scanner.nextLine();
+
+            System.out.println("Agora insira sua senha");
+
+            String senhaentrada = scanner.nextLine();
+            if(loginentrada.equals(login) && senhaentrada.equals(senha)){
+
+                System.out.println("Acesso concedido");
+                i=true;
+
+            }else {
+                System.out.println("Login e/ou Senha inválidos");
+            }
+        }
     }
 }
